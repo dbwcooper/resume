@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: './src/index.js',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -41,6 +43,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new CopyPlugin([
+      { from: './assets/resume.pdf', to: './resume.pdf' },
+    ]),
   ],
   devServer: {
     hot: true,
