@@ -1,0 +1,304 @@
+@green: #00b38a;
+@gray: #d1d1d1;
+@white: #fff;
+
+@green-dark: #00a982;
+
+@primary-color: #85a5ff;
+@bg-color: #fafbfc;
+@item-title-bg: #eee;
+
+@font-color-light: #bbb;
+@font-color: #333;
+@font-size: 14px;
+@font-size-small: 12px;
+@font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
+@font-family-title: Lucida Grande, Hiragino Sans GB, Hiragino Sans GB W3,
+  Helvetica Neue, Helvetica, Arial, Microsoft YaHei, sans-serif;
+@border-radius: 4px;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: @green;
+  transition: all .2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+ol,
+ul {
+  list-style: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid @green;
+  border-radius: 3px;
+  color: @green;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  &:hover {
+    color: #fff;
+    background-color: @green;
+  }
+}
+body {
+  background-color: @bg-color;
+  color: @font-color;
+  font-family: @font-family;
+  font-size: @font-size;
+  overflow: auto;
+  .download-pdf,
+  .last-modified {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    font-size: @font-size-small;
+    color: @font-color-light;
+    @media screen and (max-width: 1024px){
+      display: none;
+    }
+    @media print {
+      display: none;
+    }
+  }
+  .download-pdf {
+    margin: 0;
+    margin-left: -500px;
+  }
+  .last-modified {
+    width: 500px;
+    text-align: right;
+  }
+  .content {
+    position: relative;
+    width: 1024px;
+    margin: 50px auto;
+    background-color: @white;
+    overflow: hidden;
+    border-radius: @border-radius;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      margin: 0;
+      border-radius: 0px;
+    }
+    .content-hd {
+      background-color: @green;
+      padding: 30px 50px;
+      overflow: hidden;
+      color: @white;
+      @media screen and (max-width: 720px) {
+        padding: 25px 30px;
+      }
+      @media print {
+        color: #000;
+        background-color: #fff;
+      }
+      .title {
+        border-bottom: 2px solid @green-dark;
+        overflow: hidden;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        color: @white;
+        font-size: 52px;
+        font-weight: 300;
+        .name {
+          width: 50%;
+          float: left;
+          h1 {
+            font-family: @font-family-title;
+            font-weight: 500;
+            letter-spacing: 6px;
+            @media print {
+              color: #000;
+            }
+          }
+          @media screen and (max-width: 720px){
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 1.25;
+            margin-top: 10px;
+          }
+        }
+        .job {
+          width: 50%;
+          float: right;
+          text-align: right;
+          h2 {
+            font-size: 24px;
+            display: inline-block;
+            font-weight: 400;
+            @media print {
+              color: #000;
+            }
+          }
+          @media screen and (max-width: 720px){
+            width: 100%;
+            text-align: center;
+            h2 {
+              padding: 8px 16px;
+              border-top: 1px solid @green-dark;
+            }
+          }
+        }
+      }
+      .info {
+        float: left;
+        width: 50%;
+        line-height: 24px;
+        @media screen and (max-width: 720px){
+          padding-bottom: 16px;
+        }
+      }
+      .contact {
+        float: right;
+        width: 50%;
+        line-height: 22px;
+        text-align: right;
+        vertical-align: middle;
+        @media screen and (max-width: 720px) {
+          li {
+            display: inline-block;
+            height: 22px;
+            margin: 0px 4px;
+          }
+        }
+        a {
+          color: @white;
+          @media print {
+            color: #000;
+          }
+          .contact-link {
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+          .iconfont {
+            fill: @white;
+            vertical-align: text-top;
+          }
+        }
+      }
+      .name, .job, .info, .contact {
+        @media screen and (max-width: 720px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .content-bd {
+      padding: 20px 30px 50px;
+      overflow: hidden;
+      .content-left {
+        float: left;
+      }
+      .content-right {
+        float: right;
+      }
+      .content-left,
+      .content-right {
+        width: 50%;
+        overflow: hidden;
+        @media screen and (max-width: 720px) {
+          width: 100%;
+        }
+        .practice, .skill, .project {
+          padding: 10px 15px;
+          .section-hd {
+            position: relative;
+            height: 32px;
+            margin: 10px auto 5px;
+            overflow: hidden;
+            .section-title-l,
+            .section-title-r {
+              position: absolute;
+              display: inline-block;
+              width: 35%;
+              height: 1px;
+              top: 50%;
+              background-color: @item-title-bg;
+            }
+            .section-title-l {
+              left: 0;
+            }
+            .section-title-r {
+              right: 0;
+            }
+            .section-title {
+              display: block;
+              width: 24%;
+              min-width: 100px;
+              box-sizing: border-box;
+              padding: 4px 10px;
+              font-size: 16px;
+              margin: 0 auto;
+              border-radius: 32px;
+              font-weight: bold;
+              text-align: center;
+              background-color: @item-title-bg;
+            }
+          }
+          .section-bd {
+            .item-hd {
+              position: relative;
+              line-height: 20px;
+              overflow: hidden;
+              font-weight: 500;
+              min-height: 22px;
+              padding: 10px 0px 5px;
+              .item-more {
+                position: absolute;
+                top: 10px;
+                right: 0px;
+              }
+            }
+            .item-bd {
+              font-weight: 400;
+              margin-bottom: 5px;
+              .item-desc {
+                margin-bottom: 16px;
+              }
+              .item-content {
+                text-align: justify;
+                word-break: break-all;
+                line-height: 22px;
+                padding-left: 18px;
+                li {
+                  list-style: square outside;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .github-footer {
+    text-align: center;
+    .footer-link {
+      display: inline-block;
+      color: @gray;
+      margin-bottom: 25px;
+      @media screen and (max-width: 1024px) {
+        margin-top: 25px;
+      }
+    }
+  
+    @media print {
+      display: none;
+    }
+  }
+}
