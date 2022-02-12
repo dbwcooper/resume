@@ -13,18 +13,18 @@ export default function App() {
         </a>
         <span>最后更新于2022年2月</span>
       </nav>
-      <div className="text-white bg-primary p-8 lg:rounded">
-        <div className="flex justify-between items-center border-b-primary-1 border-b-2 pb-4 mb-4">
-          <h1 className="text-5xl">段波文</h1>
-          <h5 className="text-xl">Web 前端开发工程师</h5>
+      <div className="text-white bg-primary p-4 lg:p-8 lg:rounded">
+        <div className="lg:flex justify-between items-center border-b-primary-1 border-b-2 pb-4 mb-4">
+          <h1 className="text-5xl py-2">段波文</h1>
+          <h5 className="text-xl py-2">Web 前端开发工程师</h5>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="lg:flex justify-between items-center">
           <ul>
             <li>男 / 1996.02</li>
             <li>成都信息工程大学 · 网络工程</li>
             <li>本科 / 2018年毕业</li>
           </ul>
-          <ul>
+          <ul className="hidden lg:block">
             <li>
               <a
                 href="https://github.com/dbwcooper"
