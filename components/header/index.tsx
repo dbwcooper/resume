@@ -41,7 +41,6 @@ export default function App() {
               <a
                 href="mailto:dbwencookie@gmail.com"
                 title="email"
-                target="_blank"
                 className="flex justify-end items-center"
               >
                 <span className="pr-2">dbwencookie@gmail.com</span>
