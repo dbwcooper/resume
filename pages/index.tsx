@@ -54,16 +54,25 @@ export default function Home() {
             <header className="pt-4 pb-2">
               <h5 className="font-semibold flex justify-between">
                 TD SYNNEX China 官网
-                <span className="text-sm inline-block px-1 rounded text-primary border-primary font-semibold border">
-                  项目
-                </span>
+                <div>
+                  <a
+                    href="https://www.synnex-china.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm pr-2 text-sky-600 hover:underline"
+                  >
+                    链接
+                  </a>
+                  <span className="text-sm inline-block px-1 rounded text-primary border-primary font-semibold border">
+                    项目
+                  </span>
+                </div>
               </h5>
               <span className="font-semibold text-sm">2022.01 - 2022.02</span>
             </header>
             <div className="text-sm">
-              <p className="pb-2">我的工作：</p>
               <ul className="pl-6 list-disc space-y-1 ">
-                <li>负责官网前端代码实现与优化，参与设计</li>
+                <li>负责官网前端代码实现与设计</li>
                 <li>兼容 IE11 并支持平板和手机端</li>
               </ul>
             </div>
@@ -79,15 +88,16 @@ export default function Home() {
               <span className="font-semibold text-sm">2019.02 - 至今</span>
             </header>
             <div className="text-sm">
-              <p>STELLR 平台主要为客户提供 Azure/Office/Google 等云服务</p>
-              <p className="py-2">我的工作：</p>
+              <p className="pb-2">
+                STELLR 平台主要为客户提供 Azure/Office/Google 等云服务
+              </p>
               <ul className="pl-6 list-disc space-y-1 ">
                 <li>参与前端框架的设计，探索支持业务快速迭代的技术并落地</li>
                 <li>负责兼容了 JSF 老系统，实现平台的迭代升级</li>
                 <li>参与开发了低代码报表系统，减少了前后端的重复工作</li>
                 <li>
                   参与开发了 STELLR 平台的迭代升级，完成了一系列业务较复杂页面如
-                  Checkout, Contract Management 等
+                  Checkout, Contract 等
                 </li>
               </ul>
             </div>
@@ -104,11 +114,10 @@ export default function Home() {
               <span className="font-semibold text-sm">2018.03 - 2019.02</span>
             </header>
             <div className="text-sm">
-              <p>
+              <p className="pb-2">
                 STOREFRONT 是一个为分销商提供发布 TD SYNNEX
                 产品，以及管理用户的平台
               </p>
-              <p className="py-2">我的工作：</p>
               <ul className="pl-6 list-disc space-y-1 ">
                 <li>参与项目开发，编写公用组件</li>
                 <li>完善 dvajs 框架，使其支持路由级 model</li>
